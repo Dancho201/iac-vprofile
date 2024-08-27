@@ -1,8 +1,10 @@
 terraform {
+  required_version = "~> 1.9.5"
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.25.0"
+      version = "~> 5.64.0"
     }
 
     random = {
@@ -22,7 +24,7 @@ terraform {
 
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.23.0"
+      version = "~> 2.32.0"
     }
   }
 
@@ -31,9 +33,4 @@ terraform {
     key    = "terraform.tfstate"
     region = "us-west-1"
   }
-
-  required_version = "~> 1.6.3"
 }
-##
-##
-##
