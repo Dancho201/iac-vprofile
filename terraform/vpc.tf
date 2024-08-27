@@ -7,7 +7,7 @@ module "vpc" {
   cidr = "172.20.0.0/16"
 
   # Fetch availability zones and select the first 2
-  azs  = slice(data.aws_availability_zones.available.names, 0, 2)
+  azs = slice(data.aws_availability_zones.available.names, 0, 2)
 
   # Adjust private and public subnets to match the number of availability zones
   private_subnets = ["172.20.1.0/24", "172.20.2.0/24"]
